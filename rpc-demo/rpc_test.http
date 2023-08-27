@@ -1,0 +1,36 @@
+### 调用相加操作
+POST http://127.0.0.1:9000/XML_RPC_Server/service
+Content-Type: text/xml
+
+<?xml version="1.0" encoding="UTF-8"?>
+<methodCall>
+    <methodName>Calculator.add</methodName>
+    <params>
+        <param>
+            <value><int>32</int></value>
+        </param>
+        <param>
+            <value><int>10</int></value>
+        </param>
+        <!-- 依此类推，根据参数个数添加 -->
+    </params>
+</methodCall>
+
+###  调用相减操作
+
+POST http://127.0.0.1:9000/XML_RPC_Server/service
+Content-Type: text/xml
+
+<?xml version="1.0" encoding="UTF-8"?>
+<methodCall>
+    <methodName>Calculator.subtract</methodName>
+    <params>
+        <param>
+            <value><int>32</int></value>
+        </param>
+        <param>
+            <value><int>10</int></value>
+        </param>
+        <!-- 依此类推，根据参数个数添加 -->
+    </params>
+</methodCall>
