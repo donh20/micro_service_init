@@ -11,6 +11,7 @@ import io.netty.handler.codec.string.StringEncoder;
 
 import java.nio.charset.StandardCharsets;
 
+//https://blog.51cto.com/u_15646271/6705208
 public class NettyServer {
     public static void main(String[] args) {
         NioEventLoopGroup parentGroup = new NioEventLoopGroup(1);   //1个parent线程
