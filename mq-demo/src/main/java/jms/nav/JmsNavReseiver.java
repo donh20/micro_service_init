@@ -9,12 +9,12 @@ import javax.xml.soap.Text;
 
 public class JmsNavReseiver {
     public static void main(String[] args) throws Exception{
-        ConnectionFactory connectionFactory = new ActiveMQConnectionFactory("tcp://localhost:61616");
+        ConnectionFactory connectionFactory = new ActiveMQConnectionFactory("tcp://10.3.9.47:61616");
         Connection connection = connectionFactory.createConnection();
         connection.start();
         Session session = connection.createSession(false,Session.CLIENT_ACKNOWLEDGE);
 
-        Destination destination = new ActiveMQTopic("topic");
+        Destination destination = new ActiveMQTopic("mq_topic");
         MessageConsumer consumer = session.createConsumer(destination);
 
         consumer.setMessageListener(message -> {

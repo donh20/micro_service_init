@@ -9,8 +9,8 @@ import javax.jms.*;
 public class JmsNavSender {
     public static void main(String[] args) throws Exception{
 
-        ConnectionFactory connectionFactory = new ActiveMQConnectionFactory("tcp://localhost:61616");
-        Destination destination = new ActiveMQTopic("topic");
+        ConnectionFactory connectionFactory = new ActiveMQConnectionFactory("tcp://10.3.9.47:61616");
+        Destination destination = new ActiveMQTopic("mq_topic");
 
         Connection connection=connectionFactory.createConnection();
         connection.start();
